@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import Signin from './src/screens/Signin';
 import { SafeAreaView,StyleSheet,Text,useColorScheme} from 'react-native';
 
 import {
@@ -27,8 +28,8 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <Text> Ngamia Mobile App</Text>
-    </SafeAreaView>
+      <Signin/>
+       </SafeAreaView >
   );
 };
 
