@@ -1,1 +1,1 @@
-export {default} from "../../src/components/CustomInput/Input" 
+export { default } from "./CustomButton";
