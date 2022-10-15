@@ -34,12 +34,27 @@ const styles = StyleSheet.create({
     container_PRIMARY: {
         backgroundColor: "#9A6B63",
     },
+     container_SECONDARY: {
+         borderColor: "#9A6B63",
+         borderWidth:2,
+         
+    },
+
     container_TERTIARY: {},
     text: {
         fontWeight: 'bold',
         color:'black'
 
-    }
-
+    },
+    
+    text_TERTIARY: {
+        
+        color:'gray',
+    },
+    text_SECONDARY: {
+        
+        color: "#9A6B63"
+    },
+   
  })
 export default CustomButton

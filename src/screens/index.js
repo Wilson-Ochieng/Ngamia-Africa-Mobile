@@ -1,1 +1,1 @@
-export { default } from './SocialSignins'
+export { default } from './NewPassWord'

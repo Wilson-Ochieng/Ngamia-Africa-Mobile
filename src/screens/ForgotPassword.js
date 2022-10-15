@@ -3,41 +3,34 @@ import React,{useState} from 'react'
 import Input from '../components/CustomInput/Input';
 import CustomButton from '../components/CustomButton/CustomButton';
 
-const ConfirmEmail = () => {
-    const [code, setCode] = useState('');
+const ForgotPassword = () => {
+    const [username, setUsername] = useState('');
    
     //Height needed for logo Sign Screen only
-    const onConfirmPressed= () => {
+    const onSendPressed= () => {
          
-        console.warn('Confirm Email')
+        console.warn('sent!')
     }
 
     
     const onSigninPressed = () => {
         
     }
-    const onResendPressed = () => {
-        
-
-    }
+    
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.root}>
-            <Text style={styles.title}> Confirm your email</Text>
+            <Text style={styles.title}> Reset Your Password</Text>
             <Input
-                placeholder="Enter your confirmation code"
-                value={code}
-                    setValue={setCode} />
+                placeholder="Username"
+                value={username}
+                    setValue={setUsername} />
 
 
             <CustomButton
-                text='Confirm'
-                onPress={onConfirmPressed} />
+                text='Send'
+                onPress={onSendPressed} />
                            
-            <CustomButton
-                text='Resend Code'
-                onPress={onResendPressed}
-                type="SECONDARY" />
       
             <CustomButton
                 text='Back to Sign in'
@@ -74,4 +67,4 @@ const styles = StyleSheet.create({
         color:"#FDB075"
     }
 });
-export default ConfirmEmail
+export default ForgotPassword
