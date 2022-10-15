@@ -1,1 +1,1 @@
-export {default} from "../../src/components/screens/SignUp" 
+export { default } from './SocialSignins'
