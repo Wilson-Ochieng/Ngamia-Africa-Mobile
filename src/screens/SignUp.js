@@ -60,9 +60,13 @@ const SignUp = () => {
                 text='Register'
                 onPress={onSignRegisterPressed} />
             
-                <Text style={styles.text}>By registering,you confirm that you accept  our{''}
-                <Text style={styles.link} onPress={onTermsOfUsePress}>Terms  of Use</Text> and {''}
-                    <Text style={styles.link} onPress={onPrivacyPressed}>Privacy Policy</Text>
+                <Text style={styles.text}>
+                    By registering,you confirm that you accept  our{''}
+                    <Text style={styles.link} onPress={onTermsOfUsePress}>
+                        Terms  of Use</Text>{''}
+                    and {''}
+                    <Text style={styles.link} onPress={onPrivacyPressed}>
+                        Privacy Policy</Text>
                 </Text>
                  <SocialSignins/>
             <CustomButton
