@@ -13,6 +13,7 @@ import { SafeAreaView, StyleSheet, Text, useColorScheme } from 'react-native';
 import ConfirmEmail from './src/screens/ConfirmEmail';
 import ForgotPassword from './src/screens/ForgotPassword';
 import NewPassWord from './src/screens/NewPassWord';
+import AdvertsPage from './src/screens/AdvertsPage';
 import {
   Colors,
   
@@ -31,7 +32,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <NewPassWord/>
+      <AdvertsPage/>
        </SafeAreaView >
   );
 };
