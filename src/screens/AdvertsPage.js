@@ -27,10 +27,9 @@ const AdvertsPage = () => {
               loading ? <Text>Loading ...</Text> : (
                   adverts.map((photo) => (
                       <View>
-                          <Text> {photo.id}</Text>
+                          <Text> {photo.thumbnailUrl}</Text>
                           <Text> {photo.albumId}</Text>
-                          <Text> {photo.title}</Text>
-                          
+                         
 
                       </View>
                   )
