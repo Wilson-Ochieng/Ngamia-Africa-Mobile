@@ -1,1 +1,1 @@
-export {default} from "../../src/components/CustomButton/CustomButton" 
+export {default} from "../../src/components/screens/SignUp" 

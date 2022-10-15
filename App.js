@@ -8,6 +8,7 @@
 
 import React from 'react';
 import Signin from './src/screens/Signin';
+import SignUp from './src/screens/SignUp';
 import { SafeAreaView,StyleSheet,Text,useColorScheme} from 'react-native';
 
 import {
@@ -28,7 +29,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <Signin/>
+      <SignUp/>
        </SafeAreaView >
   );
 };

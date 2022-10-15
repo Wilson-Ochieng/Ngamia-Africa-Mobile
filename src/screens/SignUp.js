@@ -4,14 +4,16 @@ import Logo from "../../assets/images/nalogo.png"
 import Input from '../components/CustomInput/Input';
 import CustomButton from '../components/CustomButton/CustomButton';
 
-const Signin = () => {
+const SignUp = () => {
     const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [passwordRepeat, setPasswordRepeat] = useState('');
 
     const { height } = useWindowDimensions();
     const onSignInPressed = () => {
          
-        console.warn('Sign in')
+        console.warn('Register')
     }
     
 
@@ -34,22 +36,31 @@ const Signin = () => {
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.root}>
-            <Image source={Logo}
-                style={[styles.logo, { height: height * 0.3 }]}
-                    resizeMode = "contain" />
+            <Text style={styles.title}> Create an Account</Text>
             <Input
                 placeholder="Username"
                 value={username}
-                setValue={setUsername} />
+                    setValue={setUsername} />
+                <Input
+                placeholder="Email"
+                value={email}
+                setValue={setEmail} />
+    
             <Input
                 placeholder="Password"
                 value={password}
                 setValue={setPassword}
                  secureTextEntry
+                />
+                <Input
+                placeholder="Confirm Password"
+                value={password}
+                setValue={setPasswordRepeat}
+                 secureTextEntry
             />
 
             <CustomButton
-                text='Sign-in'
+                text='Register'
                 onPress={onSignInPressed} />
             <CustomButton
                 text='Forgot Password?'
@@ -95,5 +106,12 @@ const styles = StyleSheet.create({
         maxWidth:500,
         height: 100,
     },
+    title: {
+        
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#051C60',
+        margin:10,
+    }
 });
-export default Signin
+export default SignUp
