@@ -1,4 +1,4 @@
-import { View, Text, FlatList } from 'react-native'
+import {  Text,View  } from 'react-native'
 import React,{useState,useEffect} from 'react'
 
 
@@ -22,7 +22,7 @@ const AdvertsPage = () => {
 
 
   return (
-      <View>
+      <View >
           {
               loading ? <Text>Loading ...</Text> : (
                   adverts.map((photo) => (
