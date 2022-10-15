@@ -7,13 +7,8 @@
  */
 
 import React from 'react';
-import Signin from './src/screens/Signin';
-import SignUp from './src/screens/SignUp';
 import { SafeAreaView, StyleSheet, Text, useColorScheme } from 'react-native';
-import ConfirmEmail from './src/screens/ConfirmEmail';
-import ForgotPassword from './src/screens/ForgotPassword';
-import NewPassWord from './src/screens/NewPassWord';
-import AdvertsPage from './src/screens/AdvertsPage';
+import Navigation from './src/Navigation';
 import {
   Colors,
   
@@ -31,9 +26,12 @@ const App = () => {
   };
 
   return (
+ 
+    
     <SafeAreaView style={styles.root}>
-      <AdvertsPage/>
-       </SafeAreaView >
+      <Navigation/>
+      </SafeAreaView >
+   
   );
 };
 
