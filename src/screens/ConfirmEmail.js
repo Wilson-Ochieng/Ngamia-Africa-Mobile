@@ -4,7 +4,7 @@ import Input from '../components/CustomInput/Input';
 import CustomButton from '../components/CustomButton/CustomButton';
 import SocialSignins from '../components/SocialSignins/SocialSignins';
 
-const SignUp = () => {
+const ConfirmEmail = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -100,4 +100,4 @@ const styles = StyleSheet.create({
         color:"#FDB075"
     }
 });
-export default SignUp
+export default ConfirmEmail

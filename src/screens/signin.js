@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 import Logo from "../../assets/images/nalogo.png"
 import Input from '../components/CustomInput/Input';
 import CustomButton from '../components/CustomButton/CustomButton';
+import SocialSignins from '../components/SocialSignins/SocialSignins';
 
 const Signin = () => {
     const [username, setUsername] = useState('');
@@ -14,20 +15,10 @@ const Signin = () => {
         console.warn('Sign in')
     }
     
-
     const onForgotPasswordPressed = () =>{
 
     }
-    const onSignInFaceBook = () => {
-         
-    }
-    const onSignInGoogle = () => {
-        
-    }
-    const onSignInApple = () => {
-         
-    }
-    
+       
     const onSignUP = () => {
         
     }
@@ -55,24 +46,7 @@ const Signin = () => {
                 text='Forgot Password?'
                 onPress={onForgotPasswordPressed}
                 type="TERTIARY" />
-            <CustomButton
-                text='Sign in With FaceBook'
-                onPress={onSignInFaceBook}
-                bgColor='#E7EAF4'
-                fgColor='#4765A9'
-            />
-            <CustomButton
-                text='Sign in With Google'
-                onPress={onSignInGoogle}
-                bgColor='#FAE9EA'
-                fgColor='#DD4D44'
-            />
-            <CustomButton
-                text='Sign in With Apple'
-                onPress={onSignInApple}
-                bgColor='#e3e3e3'
-                fgColor='#363636'
-            />
+               <SocialSignins/>
             <CustomButton
                 text='Have an Account?Register'
                 onPress={onSignUP}
