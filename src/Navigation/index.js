@@ -2,12 +2,13 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Signin from '../screens/Signin';
-import AdvertsPage from '../screens/AdvertsPage';
+import Signin from '../screens/SignInScreen/Signin';
 import SignUp from '../screens/SignUpScreen/SignUp';
-import ConfirmEmail from '../screens/ConfirmEmail';
-import ForgotPassword from '../screens/ForgotPassword';
-import NewPassWord from '../screens/NewPassWord';
+import ConfirmEmail from '../screens/ConfirmEmailScreen/ConfirmEmail';
+import ForgotPassword from '../screens/ForgotPassWordScreen/ForgotPassword';
+import NewPassword from '../screens/NewPassWordScreen/NewPassWord';
+import Home from '../screens/HomeScreen/Home';
+  
 
 
 
@@ -21,8 +22,8 @@ const Navigation = () => {
               <Stack.Screen name="SignUp" component={SignUp} />
               <Stack.Screen name="ConfirmEmail" component={ConfirmEmail} />
               <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-             <Stack.Screen name=" NewPassWord" component={NewPassWord} />
-             <Stack.Screen name=" AdvertsPage" component={AdvertsPage} />
+              <Stack.Screen name=" NewPassWord" component={NewPassword} />
+              <Stack.Screen name=" Home" component={Home} />
           
               
               

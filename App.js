@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, useColorScheme } from 'react-native';
-import Navigation from './src/Navigation/Index';
+import Navigation from './src/Navigation';
 import {
   Colors,
   

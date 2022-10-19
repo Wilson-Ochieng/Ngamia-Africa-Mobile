@@ -10,7 +10,7 @@ const ConfirmEmail = () => {
    
     //Height needed for logo Sign Screen only
     const onConfirmPressed= () => {
-        navigation.navigate('AdvertsPage')
+        navigation.navigate('Home')
     }
 
     

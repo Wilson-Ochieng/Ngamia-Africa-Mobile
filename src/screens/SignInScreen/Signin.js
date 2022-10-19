@@ -1,6 +1,6 @@
 import { View, Text,Image,StyleSheet, useWindowDimensions,ScrollView} from 'react-native'
 import React,{useState} from 'react'
-import Logo from "../../assets/images/nalogo.png"
+import Logo from "../../../assets/images/nalogo.png"
 import Input from '../../components/CustomInput/Input';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import SocialSignins from '../../components/SocialSignins/SocialSignins';
@@ -17,7 +17,7 @@ const Signin = () => {
          
         console.warn('Sign in');
         //User validation
-        navigation.navigate("AdvertsPage");
+        navigation.navigate('Home');
       
     };
     
