@@ -6,7 +6,11 @@ import SocialSignins from '../../components/SocialSignins/SocialSignins';
 import { useNavigation } from '@react-navigation/native';
 
 const SignUp = () => {
-    const [username, setUsername] = useState('');
+    const [firstname, setFirstname] = useState('');
+    const [middlename, setMiddlename] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [gender, setGender] = useState('');
+    const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
@@ -34,10 +38,26 @@ const SignUp = () => {
         <View style={styles.root}>
             <Text style={styles.title}> Create an Account</Text>
             <Input
-                placeholder="Username"
-                value={username}
-                    setValue={setUsername} />
-                <Input
+                placeholder="Firstname"
+                value={firstname}
+                    setValue={setFirstname} />
+            <Input
+                placeholder="Middlename"
+                value={middlename}
+                    setValue={setMiddlename} />
+            <Input
+                placeholder="Lastname"
+                value={lastname}
+                    setValue={setLastname} />
+            <Input
+                placeholder="Gender"
+                value={gender}
+                    setValue={setGender} />
+            <Input
+                placeholder="Phone"
+                value={phone}
+                    setValue={setPhone} />
+            <Input
                 placeholder="Email"
                 value={email}
                 setValue={setEmail} />

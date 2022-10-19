@@ -23,7 +23,7 @@ const Navigation = () => {
               <Stack.Screen name="ConfirmEmail" component={ConfirmEmail} />
               <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
               <Stack.Screen name=" NewPassWord" component={NewPassword} />
-              <Stack.Screen name=" Home" component={Home} />
+             
           
               
               

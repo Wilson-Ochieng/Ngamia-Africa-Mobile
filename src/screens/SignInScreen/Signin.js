@@ -9,6 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 const Signin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [adOwner, setAdOwner] = useState('');
 
     const { height } = useWindowDimensions();
     const navigation = useNavigation();
@@ -45,7 +46,11 @@ const Signin = () => {
                 value={password}
                 setValue={setPassword}
                  secureTextEntry
-            />
+                />
+                <Input
+                placeholder="adOwner"
+                value={adOwner}
+                setValue={setAdOwner} />
 
             <CustomButton
                 text='Sign-in'
