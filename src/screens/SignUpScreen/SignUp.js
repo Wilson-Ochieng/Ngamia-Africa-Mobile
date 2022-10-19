@@ -1,8 +1,9 @@
 import { View, Text,StyleSheet, useWindowDimensions,ScrollView} from 'react-native'
 import React,{useState} from 'react'
-import Input from '../components/CustomInput/Input';
-import CustomButton from '../components/CustomButton/CustomButton';
-import SocialSignins from '../components/SocialSignins/SocialSignins';
+import Input from '../../components/CustomInput/Input';
+import CustomButton from '../../components/CustomButton/CustomButton';
+import SocialSignins from '../../components/SocialSignins/SocialSignins';
+import { useNavigation } from '@react-navigation/native';
 
 const SignUp = () => {
     const [username, setUsername] = useState('');
@@ -10,9 +11,10 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
     //Height needed for logo Sign Screen only
+
+    const navigation = useNavigation();
     const onSignRegisterPressed= () => {
-         
-        console.warn('Register')
+        navigation.navigate("ConfirmEmail");
     }
     
     const onTermsOfUsePress = () => {
@@ -24,6 +26,7 @@ const SignUp = () => {
     }
     
     const onSigninPressed = () => {
+        navigation.navigate("Signin");
         
     }
     return (

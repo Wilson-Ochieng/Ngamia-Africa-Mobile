@@ -1,5 +1,9 @@
-import {  Text,View  } from 'react-native'
-import React,{useState,useEffect} from 'react'
+import { View, Text,Image,StyleSheet, useWindowDimensions,ScrollView} from 'react-native'
+import React,{useState} from 'react'
+import Input from '../components/CustomInput/Input';
+import CustomButton from '../components/CustomButton/CustomButton';
+import SocialSignins from '../components/SocialSignins/SocialSignins';
+import { useNavigation } from '@react-navigation/native';
 
 
 

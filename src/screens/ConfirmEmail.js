@@ -2,18 +2,21 @@ import { View, Text,StyleSheet,ScrollView} from 'react-native'
 import React,{useState} from 'react'
 import Input from '../components/CustomInput/Input';
 import CustomButton from '../components/CustomButton/CustomButton';
+import { useNavigation } from '@react-navigation/native';
 
 const ConfirmEmail = () => {
     const [code, setCode] = useState('');
+    const navigation = useNavigation();
    
     //Height needed for logo Sign Screen only
     const onConfirmPressed= () => {
-         
-        console.warn('Confirm Email')
+        navigation.navigate('AdvertsPage')
     }
 
     
     const onSigninPressed = () => {
+
+     navigation.navigate('Signin')
         
     }
     const onResendPressed = () => {

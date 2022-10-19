@@ -12,21 +12,24 @@ const Signin = () => {
 
     const { height } = useWindowDimensions();
     const navigation = useNavigation();
+
     const onSignInPressed = () => {
          
         console.warn('Sign in');
         //User validation
-        navigation.navigate('Home')
+        navigation.navigate("AdvertsPage");
+      
     };
     
     
-    const onForgotPasswordPressed = () =>{
+    const onForgotPasswordPressed = () => {
+          navigation.navigate("ForgotPassword");
 
-    }
+    };
        
     const onSignUP = () => {
-        
-    }
+        navigation.navigate("SignUp");
+    };
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.root}>

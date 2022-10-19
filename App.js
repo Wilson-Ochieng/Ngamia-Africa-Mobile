@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, useColorScheme } from 'react-native';
-import Navigation from './src/Navigation';
+import Navigation from './src/Navigation/Index';
 import {
   Colors,
   
@@ -26,12 +26,10 @@ const App = () => {
   };
 
   return (
- 
-    
     <SafeAreaView style={styles.root}>
       <Navigation/>
       </SafeAreaView >
-   
+
   );
 };
 
