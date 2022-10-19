@@ -1,20 +1,22 @@
 import { View, Text,StyleSheet,ScrollView} from 'react-native'
 import React,{useState} from 'react'
-import Input from '../components/CustomInput/Input';
-import CustomButton from '../components/CustomButton/CustomButton';
+import Input from '../../components/CustomInput/Input';
+import CustomButton from '../../components/CustomButton/CustomButton';
+import { useNavigation } from '@react-navigation/native';
 
-const NewPassword = () => {
-    const [code, setCode] = useState('');
-    const [newPass, setNewPass] = useState('');
+const ForgotPassword = () => {
+    const [username, setUsername] = useState('');
+    const navigation= useNavigation()
    
     //Height needed for logo Sign Screen only
-    const onSubmitPressed= () => {
+    const onSendPressed= () => {
          
-        console.warn('sent')
+    navigation.navigate("NewPassword")
     }
 
     
     const onSigninPressed = () => {
+           navigation.navigate("Signin")
         
     }
     
@@ -22,9 +24,15 @@ const NewPassword = () => {
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.root}>
             <Text style={styles.title}> Reset Your Password</Text>
-            <Input placeholder="Code"  value={code} setValue={setCode} />
-            <Input placeholder="Enter your New Password" value={newPass} setValue={setNewPass} />
-           <CustomButton text='Submit' onPress={onSubmitPressed} />
+            <Input
+                placeholder="Username"
+                value={username}
+                    setValue={setUsername} />
+
+
+            <CustomButton
+                text='Send'
+                onPress={onSendPressed} />
                            
       
             <CustomButton
@@ -62,4 +70,4 @@ const styles = StyleSheet.create({
         color:"#FDB075"
     }
 });
-export default NewPassword
+export default ForgotPassword
