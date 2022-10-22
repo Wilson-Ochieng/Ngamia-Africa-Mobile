@@ -59,7 +59,7 @@ const Signin = () => {
                 text='Forgot Password?'
                 onPress={onForgotPasswordPressed}
                 type="TERTIARY" />
-               <SocialSignins/>
+               {/* <SocialSignins/> */}
             <CustomButton
                 text='Have an Account?Register'
                 onPress={onSignUP}

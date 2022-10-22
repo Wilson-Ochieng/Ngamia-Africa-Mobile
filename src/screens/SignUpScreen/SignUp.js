@@ -6,12 +6,35 @@ import SocialSignins from '../../components/SocialSignins/SocialSignins';
 import { useNavigation } from '@react-navigation/native';
 
 const SignUp = () => {
-    const [username, setUsername] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [middleName, setMiddleName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [gender, setGender] = useState('');
+    const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
     //Height needed for logo Sign Screen only
 
+ fetch('https://apide.ngamia.africa/api/MQUserAuthentications/Registerse/', {  
+  method: 'POST',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  },
+     body: JSON.stringify({
+    firstName: "string",
+    middleName: "string",
+     lastName: "string",
+     gender: "string",
+     phone: "string",
+     email: "user@example.com",
+     password: "string",
+    activationURL: "https://customerdev-marquee.ngamia.africa//activation?"
+  })
+})
+
+ 
     const navigation = useNavigation();
     const onSignRegisterPressed= () => {
         navigation.navigate("ConfirmEmail");
@@ -34,10 +57,26 @@ const SignUp = () => {
         <View style={styles.root}>
             <Text style={styles.title}> Create an Account</Text>
             <Input
-                placeholder="Username"
-                value={username}
-                    setValue={setUsername} />
-                <Input
+                placeholder="FirstName"
+                value={firstName}
+                    setValue={setFirstName} />
+            <Input
+                placeholder="Middlename"
+                value={middleName}
+                    setValue={setMiddleName} />
+            <Input
+                placeholder="Lastname"
+                value={lastName}
+                    setValue={setLastName} />
+            <Input
+                placeholder="Gender"
+                value={gender}
+                    setValue={setGender} />
+            <Input
+                placeholder="Phone"
+                value={phone}
+                    setValue={setPhone} />
+            <Input
                 placeholder="Email"
                 value={email}
                 setValue={setEmail} />
@@ -50,7 +89,7 @@ const SignUp = () => {
                 />
                 <Input
                 placeholder="Confirm Password"
-                value={password}
+                value={passwordRepeat}
                 setValue={setPasswordRepeat}
                  secureTextEntry
             />
@@ -67,7 +106,7 @@ const SignUp = () => {
                     <Text style={styles.link} onPress={onPrivacyPressed}>
                         Privacy Policy</Text>
                 </Text>
-                 <SocialSignins/>
+                 {/* <SocialSignins/> */}
             <CustomButton
                 text='Have an Account?Sign in'
                 onPress={onSigninPressed}
