@@ -3,7 +3,6 @@ import React,{useState} from 'react'
 import Logo from "../../../assets/images/nalogo.png"
 import Input from '../../components/CustomInput/Input';
 import CustomButton from '../../components/CustomButton/CustomButton';
-import SocialSignins from '../../components/SocialSignins/SocialSignins';
 import { useNavigation } from '@react-navigation/native';
 
 const Signin = () => {
@@ -14,11 +13,28 @@ const Signin = () => {
     const { height } = useWindowDimensions();
     const navigation = useNavigation();
 
+fetch('https://apide.ngamia.africa/api/MQUserAuthentications/Login/', {  
+  method: 'POST',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  },
+     body: JSON.stringify({
+         username: "string",
+         password: "string",
+         adOwner: true
+  })
+})
+
+
+
+
+
     const onSignInPressed = () => {
          
         console.warn('Sign in');
         //User validation
-        navigation.navigate('Home');
+        navigation.navigate('Advert');
       
     };
     

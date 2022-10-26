@@ -1,8 +1,7 @@
-import { View, Text,StyleSheet, useWindowDimensions,ScrollView} from 'react-native'
+import { View, Text,StyleSheet, useWindowDimensions,ScrollView, FlatList} from 'react-native'
 import React,{useState} from 'react'
 import Input from '../../components/CustomInput/Input';
 import CustomButton from '../../components/CustomButton/CustomButton';
-import SocialSignins from '../../components/SocialSignins/SocialSignins';
 import { useNavigation } from '@react-navigation/native';
 
 const SignUp = () => {
@@ -13,7 +12,8 @@ const SignUp = () => {
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [passwordRepeat, setPasswordRepeat] = useState('');
+    const [activationURL, setActivationURL] =useState('')
+
     //Height needed for logo Sign Screen only
 
  fetch('https://apide.ngamia.africa/api/MQUserAuthentications/Registerse/', {  
@@ -23,14 +23,14 @@ const SignUp = () => {
     'Content-Type': 'application/json',
   },
      body: JSON.stringify({
-    firstName: "string",
-    middleName: "string",
-     lastName: "string",
-     gender: "string",
-     phone: "string",
-     email: "user@example.com",
-     password: "string",
-    activationURL: "https://customerdev-marquee.ngamia.africa//activation?"
+         firstName: "string",
+         middleName: "string",
+         lastName: "string",
+         gender: "string",
+         phone: "string",
+         email: "user@example.com",
+         password: "string",
+         activationURL: "https://customerdev-marquee.ngamia.africa//activation?"
   })
 })
 
@@ -53,7 +53,7 @@ const SignUp = () => {
         
     }
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <FlatList showsVerticalScrollIndicator={false}>
         <View style={styles.root}>
             <Text style={styles.title}> Create an Account</Text>
             <Input
@@ -87,12 +87,15 @@ const SignUp = () => {
                 setValue={setPassword}
                  secureTextEntry
                 />
-                <Input
-                placeholder="Confirm Password"
-                value={passwordRepeat}
-                setValue={setPasswordRepeat}
-                 secureTextEntry
-            />
+            <Input
+                placeholder="activationURL"
+                value={activationURL}
+                setValue={setActivationURL}
+                               />
+
+
+                
+              
 
             <CustomButton
                 text='Register'
@@ -113,7 +116,7 @@ const SignUp = () => {
                 type="TERTIARY" />
       
             </View>
-            </ScrollView>
+            </FlatList>
 
         
     );

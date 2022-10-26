@@ -6,9 +6,25 @@ import { useNavigation } from '@react-navigation/native';
 
 const ForgotPassword = () => {
     const [username, setUsername] = useState('');
+    const [appSigned, setAppSigned] = useState('');
+    const [adOwner, setAdOwner] = useState('');
     const navigation= useNavigation()
    
-    //Height needed for logo Sign Screen only
+
+ fetch('https://apide.ngamia.africa/api/MQUserAuthentications/ForgetPassword', {  
+  method: 'POST',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  },
+     body: JSON.stringify({
+         username: "string",
+         appSigned: "QASDRTY76",
+         adOwner: true
+  })
+})
+
+     
     const onSendPressed= () => {
          
     navigation.navigate("NewPassword")
@@ -28,6 +44,14 @@ const ForgotPassword = () => {
                 placeholder="Username"
                 value={username}
                     setValue={setUsername} />
+            <Input
+                placeholder="appSigned"
+                value={appSigned}
+                    setValue={setAppSigned} />
+            <Input
+                placeholder="adOwner"
+                value={adOwner}
+                    setValue={setAdOwner} />
 
 
             <CustomButton
