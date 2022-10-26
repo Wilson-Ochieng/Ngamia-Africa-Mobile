@@ -8,7 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 const Signin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [adOwner, setAdOwner] = useState('');
+    // const [adOwner, setAdOwner] = useState('');
 
     const { height } = useWindowDimensions();
     const navigation = useNavigation();
@@ -63,10 +63,10 @@ fetch('https://apide.ngamia.africa/api/MQUserAuthentications/Login/', {
                 setValue={setPassword}
                  secureTextEntry
                 />
-                <Input
+                {/* <Input
                 placeholder="adOwner"
                 value={adOwner}
-                setValue={setAdOwner} />
+                setValue={setAdOwner} /> */}
 
             <CustomButton
                 text='Sign-in'
