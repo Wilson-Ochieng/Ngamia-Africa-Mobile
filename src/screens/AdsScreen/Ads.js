@@ -1,46 +1,28 @@
-import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView } from 'react-native'
-import React, { useState } from 'react'
-import Input from '../../components/CustomInput/Input';
-import CustomButton from '../../components/CustomButton/CustomButton';
-import { useNavigation } from '@react-navigation/native';
-
-
+import { View, Text, FlatList } from 'react-native'
+import React from 'react'
 
 const Ads = () => {
 
+    fetch('https://apide.ngamia.africa/api/MQChannelsData/GetMarquees', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            ChannelCode: MarqueePortal,
 
-    const [adverts, setAdverts] = useState([]);
-    const [loading, setLoading] = useState(true)
-    const url = "https://jsonplaceholder.typicode.com/photos";
-    useEffect(() => {
+        })
+    })
 
-        fetch(url)
-            .then((response) => response.json())
-            .then((json) => setAdverts(json))
-            .catch((error) => alert(error))
-            .finally(() => setLoading(false));
-    }, []);
 
 
 
 
     return (
-        <View >
-            {
-                loading ? <Text>Loading ...</Text> : (
-                    adverts.map((photo) => (
-                        <View>
-                            <Text> {photo.thumbnailUrl}</Text>
-                            <Text> {photo.albumId}</Text>
-
-
-                        </View>
-                    )
-                    )
-                )
-            }
-
-        </View>
+        <FlatList>
+            <Text>{ChannelCode}</Text>
+        </FlatList>
     )
 }
 
