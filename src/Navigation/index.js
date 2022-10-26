@@ -7,7 +7,7 @@ import SignUp from '../screens/SignUpScreen/SignUp';
 import ConfirmEmail from '../screens/ConfirmEmailScreen/ConfirmEmail';
 import ForgotPassword from '../screens/ForgotPassWordScreen/ForgotPassword';
 import NewPassword from '../screens/NewPassWordScreen/NewPassWord';
-import AdvertScreen from '../screens/AdvertScreen';
+import Ads from '../screens/AdsScreen/Ads';
   
 
 
@@ -23,7 +23,7 @@ const Navigation = () => {
               <Stack.Screen name="ConfirmEmail" component={ConfirmEmail} />
               <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
               <Stack.Screen name=" NewPassWord" component={NewPassword} />
-              <Stack.Screen name=" Advert" component={AdvertScreen} />
+              <Stack.Screen name=" Ads" component={Ads} />
               
               
              

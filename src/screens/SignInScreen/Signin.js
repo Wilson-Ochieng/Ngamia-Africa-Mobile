@@ -34,7 +34,7 @@ fetch('https://apide.ngamia.africa/api/MQUserAuthentications/Login/', {
          
         console.warn('Sign in');
         //User validation
-        navigation.navigate('Advert');
+        navigation.navigate('Ads');
       
     };
     
